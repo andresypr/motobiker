@@ -52,6 +52,7 @@ export class ClientComponent implements OnInit {
       res => {
         const index = this.clients.map(skill => skill.nit).indexOf(res.nit);
         this.clients[index] = res;
+        this.dataSource = new MatTableDataSource(this.clients);
         this.snackBar.openFromComponent(SnackBarComponent, {
           duration: this.durationInSeconds * 1000,
         });
@@ -68,8 +69,8 @@ export class ClientComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(
       res => {
-        const index = this.clients.map(skill => skill.nit).indexOf(res.nit);
-        this.clients[index] = res;
+        this.clients.push(res);
+        this.dataSource = new MatTableDataSource(this.clients);
         this.snackBar.openFromComponent(SnackBarComponent, {
           duration: this.durationInSeconds * 1000,
         });
@@ -88,7 +89,8 @@ export class ClientComponent implements OnInit {
     dialogRef.afterClosed().subscribe(
       res => {
         const index = this.clients.map(skill => skill.nit).indexOf(res.nit);
-        this.clients.splice(index);
+        this.clients.splice(index, 1);
+        this.dataSource = new MatTableDataSource(this.clients);
         this.snackBar.openFromComponent(SnackBarComponent, {
           duration: this.durationInSeconds * 1000,
         });
