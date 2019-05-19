@@ -1,0 +1,29 @@
+<h1 mat-dialog-title align="center"> {{title}} </h1>
+<mat-dialog-content *ngIf="option >= 1">
+  <form [formGroup]="form">
+    <mat-form-field class="form-group">
+      <input matInput placeholder="nit" formControlName="nit" type="number"
+             [(ngModel)]="client.nit">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Nombre" type="text" formControlName="name"
+             [(ngModel)]="client.name">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Identificacion" type="number" formControlName="identifier"
+             [(ngModel)]="client.identifier">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <span matPrefix>+57 &nbsp;</span>
+      <input matInput placeholder="Celular" type="number" formControlName="phone"
+             [(ngModel)]="client.phone">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-content *ngIf="option === 0">
+  <p>¿Esta seguro que desea borrar este cliente?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="onSave()"> Guardar</button>
+</mat-dialog-actions>

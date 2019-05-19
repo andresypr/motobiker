@@ -1,0 +1,30 @@
+<div class="H2SoFe LZgQXe">
+  <div class="RAYh1e LZgQXe">
+    <mat-card class="xkfVF">
+      <mat-card-header >
+          <img src="">
+      </mat-card-header>
+      <mat-card-content align="center" >
+        <!-- -->
+        <mat-list [formGroup]="loginForm">
+          <!-- -->
+          <mat-form-field>
+            <input [(ngModel)]="user.username" type="text" formControlName="username" placeholder="Usuario" matInput
+                   required autofocus>
+          </mat-form-field>
+          <!-- -->
+          <mat-form-field>
+            <input [(ngModel)]="user.password" type="password" formControlName="password" placeholder="Password"
+                   matInput required>
+          </mat-form-field>
+        </mat-list>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary" class="button" [disabled]="loginForm.invalid" (click)="login()">
+          Ingresar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

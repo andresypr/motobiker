@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-header>
+
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <button mat-flat-button color="primary" (click)="onSave()">Crear</button>
+    </div>
+    <mat-table [dataSource]="dataSource">
+      <!-- Name Column -->
+      <ng-container matColumnDef="nit">
+        <mat-header-cell *matHeaderCellDef> Nit</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.nit}}</mat-cell>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name}}</mat-cell>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="identifier">
+        <mat-header-cell *matHeaderCellDef> Identificador</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.identifier}}</mat-cell>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef> Telefono</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.phone}}</mat-cell>
+      </ng-container>
+      <!-- Color Column -->
+      <ng-container matColumnDef="options" align="right">
+        <mat-header-cell *matHeaderCellDef> Opciones</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="onEdit(row)" matTooltip="Editas">
+            <mat-icon color="secondary">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="onDelete(row)" matTooltip="Eliminar">
+            <mat-icon color="secondary">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <!-- -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  </mat-card-content>
+</mat-card>

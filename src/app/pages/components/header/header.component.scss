@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+// changes containers
+.container {
+  @media(min-width: 1200px) {
+    max-width: 90%;
+  }
+  padding: 30px;
+  background-color: white;
+}
+
+.container-fluid {
+  @media(min-width: 1200px) {
+    height: 100vh;
+  }
+  padding: 0;
+}
