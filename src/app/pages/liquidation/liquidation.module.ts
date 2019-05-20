@@ -9,7 +9,7 @@ import {ClientComponent} from './client/client.component';
 
 import {ClientDialog} from './client/dialog/client.dialog';
 import {SnackBarComponent} from '../shared/snack-bar.component';
-import { DialogComponent } from './maintenance/dialog/dialog.component';
+import {MaintenanceDialog} from './maintenance/dialog/maintenance.dialog';
 
 @NgModule({
   imports: [
@@ -24,11 +24,12 @@ import { DialogComponent } from './maintenance/dialog/dialog.component';
     ClientComponent,
     ClientDialog,
     SnackBarComponent,
-    DialogComponent
+    MaintenanceDialog
   ],
   entryComponents: [
     ClientDialog,
-    SnackBarComponent
+    SnackBarComponent,
+    MaintenanceDialog
   ]
 })
 export class LiquidationModule { }
