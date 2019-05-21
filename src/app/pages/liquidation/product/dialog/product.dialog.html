@@ -23,6 +23,6 @@
   <p>¿Esta seguro que desea borrar este cliente?</p>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button color="primary" *ngIf="option >= 1" (click)="onSave()"> Guardar </button>
-  <button mat-raised-button color="primary" *ngIf="option === 0" (click)="onDelete()"> Eliminar </button>
+  <button mat-raised-button color="primary" *ngIf="option >= 1" (click)="onSave()" [disabled]="form.invalid"> Guardar </button>
+  <button mat-raised-button color="primary" *ngIf="option === 0" (click)="onDelete()" > Eliminar </button>
 </mat-dialog-actions>
