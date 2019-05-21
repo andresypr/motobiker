@@ -11,6 +11,8 @@ import {ClientDialog} from './client/dialog/client.dialog';
 import {SnackBarComponent} from '../shared/snack-bar.component';
 import {MaintenanceDialog} from './maintenance/dialog/maintenance.dialog';
 import {MaintenanceComponent} from './maintenance/maintenance.component';
+import {ProductComponent} from './product/product.component';
+import {ProductDialog} from './product/dialog/product.dialog';
 
 @NgModule({
   imports: [
@@ -26,12 +28,15 @@ import {MaintenanceComponent} from './maintenance/maintenance.component';
     ClientDialog,
     SnackBarComponent,
     MaintenanceComponent,
-    MaintenanceDialog
+    MaintenanceDialog,
+    ProductComponent,
+    ProductDialog
   ],
   entryComponents: [
     ClientDialog,
+    ProductDialog,
     SnackBarComponent,
-    MaintenanceDialog
+    MaintenanceDialog,
   ]
 })
 export class LiquidationModule { }

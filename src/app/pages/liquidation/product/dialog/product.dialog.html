@@ -1,0 +1,27 @@
+<h1 mat-dialog-title align="center"> {{title}} </h1>
+<mat-dialog-content *ngIf="option >= 1">
+  <form [formGroup]="form">
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Codigo" formControlName="code" type="number"
+             [(ngModel)]="product.code">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Codigo" formControlName="name" type="string"
+             [(ngModel)]="product.name">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Prcio" formControlName="price" type="number"
+             [(ngModel)]="product.price">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Categoria" formControlName="category" type="string"
+             [(ngModel)]="product.category">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-content *ngIf="option === 0">
+  <p>¿Esta seguro que desea borrar este cliente?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="onSave()"> Guardar</button>
+</mat-dialog-actions>

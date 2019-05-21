@@ -6,6 +6,7 @@ import {ClientModel} from '../../../../models/client.model';
 import {catchError, tap} from 'rxjs/operators';
 import {RespModel} from '../../../../models/resp.model';
 import {MaintenaceModel} from '../../../../models/maintenace.model';
+import {ProductModel} from '../../../../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -54,6 +55,28 @@ export class LiquidationService {
 
   deleteMaintenance(maintenance: MaintenaceModel): Observable<RespModel> {
     const endPoint = `${environment.apiUrl}/RemoveMaintenance`;
+    return this.api.post(endPoint, maintenance).pipe(
+      tap((res: RespModel) => res)
+    );
+  }
+
+  getProducts(): Observable<ProductModel[]> {
+    const endPoint = `${environment.apiUrl}/GetProducts`;
+    return this.api.get(endPoint).pipe(
+      tap((value: ProductModel[]) => value)
+      // catchError(this.api.)
+    );
+  }
+
+  saveProduct(maintenance: ProductModel): Observable<RespModel> {
+    const endPoint = `${environment.apiUrl}/CreateProducts`;
+    return this.api.post(endPoint, maintenance).pipe(
+      tap((res: RespModel) => res)
+    );
+  }
+
+  deleteProduct(maintenance: ProductModel): Observable<RespModel> {
+    const endPoint = `${environment.apiUrl}/RemoveProducts`;
     return this.api.post(endPoint, maintenance).pipe(
       tap((res: RespModel) => res)
     );
