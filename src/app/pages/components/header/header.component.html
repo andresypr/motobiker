@@ -21,9 +21,9 @@
           *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <i class="material-icons">
-          exit_to_app
-        </i>
+        <button type="button" (click)="onClear()">
+          <mat-icon aria-label="exit_to_app"> exit_to_app </mat-icon>
+        </button>
       </mat-toolbar>
       <!-- Add Content Here -->
       <div class="container">
