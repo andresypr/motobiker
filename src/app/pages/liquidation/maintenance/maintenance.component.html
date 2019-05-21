@@ -9,33 +9,23 @@
     <mat-table [dataSource]="dataSource">
       <!-- Name Column -->
       <ng-container matColumnDef="code">
-        <mat-header-cell *matHeaderCellDef> Nit</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Codigo </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.code}}</mat-cell>
       </ng-container>
       <!-- Name Column -->
-      <ng-container matColumnDef="client">
-        <mat-header-cell *matHeaderCellDef> Nombre</mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.client}}</mat-cell>
-      </ng-container>
-      <!-- Name Column -->
       <ng-container matColumnDef="motorcycle">
-        <mat-header-cell *matHeaderCellDef> Identificador</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Moto </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.motorcycle}}</mat-cell>
       </ng-container>
       <!-- Name Column -->
-      <ng-container matColumnDef="date">
-        <mat-header-cell *matHeaderCellDef> Telefono</mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.date}}</mat-cell>
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.description}}</mat-cell>
       </ng-container>
       <!-- Name Column -->
       <ng-container matColumnDef="cost">
-        <mat-header-cell *matHeaderCellDef> Telefono</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Costo </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.cost}}</mat-cell>
-      </ng-container>
-      <!-- Name Column -->
-      <ng-container matColumnDef="description">
-        <mat-header-cell *matHeaderCellDef> Telefono</mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.description}}</mat-cell>
       </ng-container>
       <!-- Color Column -->
       <ng-container matColumnDef="options" align="right">

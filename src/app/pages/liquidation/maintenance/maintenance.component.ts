@@ -18,7 +18,7 @@ import {MaintenaceModel} from '../../../models/maintenace.model';
 export class MaintenanceComponent implements OnInit {
   durationInSeconds = 5;
 
-  displayedColumns = ['code', 'client', 'motorcycle', 'date', 'cost', 'description', 'options'];
+  displayedColumns = ['code', 'code', 'motorcycle', 'description', 'cost', 'options'];
   dataSource: MatTableDataSource<MaintenaceModel>;
   clients: MaintenaceModel[];
   //

@@ -47,11 +47,9 @@ export class MaintenanceDialog implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       code: new FormControl('', [Validators.required]),
-      client: new FormControl('', [Validators.required]),
       motorcycle: new FormControl('', [Validators.required]),
-      date: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
       cost: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required])
     });
   }
 
