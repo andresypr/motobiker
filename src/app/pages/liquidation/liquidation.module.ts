@@ -10,6 +10,7 @@ import {ClientComponent} from './client/client.component';
 import {ClientDialog} from './client/dialog/client.dialog';
 import {SnackBarComponent} from '../shared/snack-bar.component';
 import {MaintenanceDialog} from './maintenance/dialog/maintenance.dialog';
+import {MaintenanceComponent} from './maintenance/maintenance.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import {MaintenanceDialog} from './maintenance/dialog/maintenance.dialog';
     ClientComponent,
     ClientDialog,
     SnackBarComponent,
+    MaintenanceComponent,
     MaintenanceDialog
   ],
   entryComponents: [

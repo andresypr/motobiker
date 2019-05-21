@@ -1,3 +1,35 @@
-<p>
-  dialog works!
-</p>
+<h1 mat-dialog-title align="center"> {{title}} </h1>
+<mat-dialog-content *ngIf="option >= 1">
+  <form [formGroup]="form">
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Codigo" formControlName="code" type="number"
+             [(ngModel)]="maintenance.code">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="client" formControlName="client" type="string"
+             [(ngModel)]="maintenance.client">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="motorcycle" formControlName="motorcycle" type="string"
+             [(ngModel)]="maintenance.motorcycle">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="date" formControlName="date" type="string"
+             [(ngModel)]="maintenance.date">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="cost" formControlName="code" type="number"
+             [(ngModel)]="maintenance.cost">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="description" formControlName="description" type="string"
+             [(ngModel)]="maintenance.description">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-content *ngIf="option === 0">
+  <p>¿Esta seguro que desea borrar este cliente?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="onSave()"> Guardar</button>
+</mat-dialog-actions>

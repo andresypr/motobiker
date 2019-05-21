@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ClientModel} from '../../models/client.model';
+import {MaintenaceModel} from '../../models/maintenace.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,17 @@ export class InitialiseUtil {
       name: string;
       nit: number;
       phone: number;
+    };
+  }
+
+  static initialiseMaintenace(): MaintenaceModel {
+    return new class implements MaintenaceModel {
+      client: number;
+      code: number;
+      cost: number;
+      date: string;
+      description: string;
+      motorcycle: string;
     };
   }
 
