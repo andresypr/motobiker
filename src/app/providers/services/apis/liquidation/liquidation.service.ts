@@ -7,6 +7,7 @@ import {catchError, tap} from 'rxjs/operators';
 import {RespModel} from '../../../../models/resp.model';
 import {MaintenaceModel} from '../../../../models/maintenace.model';
 import {ProductModel} from '../../../../models/product.model';
+import {FactureModel} from '../../../../models/facture.model';
 
 @Injectable({
   providedIn: 'root'
@@ -79,6 +80,14 @@ export class LiquidationService {
     const endPoint = `${environment.apiUrl}/RemoveProducts`;
     return this.api.post(endPoint, maintenance).pipe(
       tap((res: RespModel) => res)
+    );
+  }
+
+  getFacture(): Observable<FactureModel> {
+    const endPoint = `${environment.apiUrl}/GetFacture`;
+    return this.api.get(endPoint).pipe(
+      tap((value: FactureModel) => value)
+      // catchError(this.api.)
     );
   }
 

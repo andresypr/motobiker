@@ -8,6 +8,7 @@ import {SnackBarComponent} from '../../shared/snack-bar.component';
 import {MaintenanceDialog} from './dialog/maintenance.dialog';
 
 import {MaintenaceModel} from '../../../models/maintenace.model';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -28,7 +29,8 @@ export class MaintenanceComponent implements OnInit {
   constructor(
     private service: LiquidationService,
     private snackBar: MatSnackBar,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {
   }
 

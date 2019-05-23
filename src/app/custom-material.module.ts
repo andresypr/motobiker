@@ -24,7 +24,7 @@ import {
   MatOptionModule,
   MatTooltipModule,
   NativeDateModule,
-  MatProgressBarModule, MatSnackBarModule
+  MatProgressBarModule, MatSnackBarModule, MatRadioModule
 } from '@angular/material';
 
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
@@ -68,7 +68,8 @@ const moment = _rollupMoment || _moment;
     MatSelectModule,
     MatOptionModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule
   ],
   exports: [
     MatTooltipModule,
@@ -94,7 +95,8 @@ const moment = _rollupMoment || _moment;
     MatSelectModule,
     MatOptionModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule
   ],
   providers: [
     MatDatepickerModule,

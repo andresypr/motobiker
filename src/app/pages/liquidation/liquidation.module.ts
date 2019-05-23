@@ -13,6 +13,8 @@ import {MaintenanceDialog} from './maintenance/dialog/maintenance.dialog';
 import {MaintenanceComponent} from './maintenance/maintenance.component';
 import {ProductComponent} from './product/product.component';
 import {ProductDialog} from './product/dialog/product.dialog';
+import { FactureComponent } from './facture/facture.component';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -21,7 +23,7 @@ import {ProductDialog} from './product/dialog/product.dialog';
     FormsModule,
     ReactiveFormsModule,
     LiquidationRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [
     ClientComponent,
@@ -30,7 +32,8 @@ import {ProductDialog} from './product/dialog/product.dialog';
     MaintenanceComponent,
     MaintenanceDialog,
     ProductComponent,
-    ProductDialog
+    ProductDialog,
+    FactureComponent
   ],
   entryComponents: [
     ClientDialog,

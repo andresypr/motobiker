@@ -31,6 +31,9 @@
       <ng-container matColumnDef="options" align="right">
         <mat-header-cell *matHeaderCellDef> Opciones</mat-header-cell>
         <mat-cell *matCellDef="let row">
+          <a [routerLink]="['/app/liquidation/factory']" matTooltip="Factura">
+            <mat-icon color="secondary">save_alt</mat-icon>
+          </a>
           <button mat-icon-button (click)="onEdit(row)" matTooltip="Editas">
             <mat-icon color="secondary">edit</mat-icon>
           </button>
